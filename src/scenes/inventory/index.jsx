@@ -1,4 +1,3 @@
-
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
@@ -18,11 +17,7 @@ const Inventory = () => {
     { field: "expectedTime", headerName: "location", flex: 1, headerClassName: "header-class" },
     { field: "dateTime", headerName: "dateTime", flex: 1, headerClassName: "header-class" },
     { field: "stage", headerName: "item_status", flex: 1, headerClassName: "header-class" },
-  ];
- 
- 
- 
- 
+  ]; 
   return (
     <Box m="20px">
       <Header
@@ -60,9 +55,7 @@ const Inventory = () => {
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
             color: `${colors.grey[100]} !important`,
-          }
- 
-         
+          }     
         }}
       >
       <Box

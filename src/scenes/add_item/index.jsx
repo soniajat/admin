@@ -6,7 +6,6 @@ import Header from "../../components/Header";
 
 const Add_Item = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
-
   const handleFormSubmit = (values) => {
     console.log(values);
   };
@@ -14,7 +13,6 @@ const Add_Item = () => {
   return (
     <Box m="20px">
       <Header title="ADD ITEM" subtitle="Add a new item" />
-
       <Formik
         onSubmit={handleFormSubmit}
         initialValues={initialValues}

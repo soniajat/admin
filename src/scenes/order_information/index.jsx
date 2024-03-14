@@ -1,4 +1,3 @@
-
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
@@ -8,8 +7,7 @@ import { useTheme } from "@mui/material";
  
 const Order_Information = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
- 
+  const colors = tokens(theme.palette.mode); 
   const columns = [
     { field: "id", headerName: "ID", flex: 1, headerClassName: "header-class" },
     { field: "orderId", headerName: "Order ID", headerClassName: "header-class", flex: 1 },
