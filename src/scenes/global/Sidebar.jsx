@@ -41,7 +41,7 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
-        height: "736px",
+        height: "737px",
         "& .pro-sidebar-inner": {
           background: "#630944",
           overflow: "hidden",
