@@ -1,10 +1,8 @@
-
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
@@ -14,9 +12,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
  
 const Item = ({ title, to, icon, selected, setSelected }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  const textColor = theme.palette.mode === "dark" ? colors.grey[100] : "#FFFFFF";
+  
+  const textColor ="#FFFFFF";
   return (
     <MenuItem
       active={selected === title}
@@ -33,8 +30,6 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 };
  
 const Sidebar = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
  
@@ -52,12 +47,7 @@ const Sidebar = () => {
         "& .pro-inner-item": {
           padding: "5px 35px 5px 20px !important",
         },
-        "& .pro-inner-item:hover": {
-          color: theme.palette.mode === "dark" ? colors.blueAccent[500] : colors.greenAccent[500],
-        },
-        "& .pro-menu-item.active": {
-          color: theme.palette.mode === "dark" ? colors.blueAccent[500] : colors.greenAccent[500],
-        },
+        
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
@@ -68,7 +58,7 @@ const Sidebar = () => {
             icon={isCollapsed ? <MenuIcon /> : undefined}
             style={{
               margin: "10px 0 30px 0",
-              color: "white", // Changed color to white
+              color: "white", 
             }}
           >
             {!isCollapsed && (
@@ -78,12 +68,12 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h4" color="white"> {/* Changed color to white */}
+                <Typography variant="h4" color="white"> 
                   ADMIN PORTAL
                 </Typography>
                 
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                  <MenuIcon style={{ color: "white" }} /> {/* Changed color to white */}
+                  <MenuIcon style={{ color: "white" }} /> 
                 </IconButton>
               </Box>
             )}
@@ -101,7 +91,7 @@ const Sidebar = () => {
                 />
               </Box>
               <Box textAlign="center" mt="10px">
-                <Typography variant="h5" color={theme.palette.mode === "dark" ? colors.blueAccent[500] : colors.greenAccent[500]}>
+                <Typography variant="h5" color="#4cceac">
                   Admin Name
                 </Typography>
               </Box>

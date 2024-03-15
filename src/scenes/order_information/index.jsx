@@ -56,8 +56,6 @@ const Order_Information = () => {
     rows={mockDataContacts}
     columns={columns}
     components={{ Toolbar: GridToolbar }}
-    disableColumnMenu
-    disableColumnSelector
   />
 </Box>
       </Box>

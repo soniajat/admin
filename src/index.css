@@ -24,26 +24,19 @@ body,
 ::-webkit-scrollbar-track {
   background: #e0e0e0;
 }
- 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
- 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-/* Assuming `.pro-sidebar` is the class of the sidebar container */
 .pro-sidebar {
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; 
 }
-/* Hide the scrollbar */
 .pro-sidebar {
   scrollbar-width: none !important; /* Hide scrollbar for Firefox */
   -ms-overflow-style: none !important; /* Hide scrollbar for Internet Explorer and Edge */
 }
- 
 .pro-sidebar::-webkit-scrollbar {
   display: none !important; /* Hide scrollbar for Webkit-based browsers (e.g., Chrome, Safari) */
 }

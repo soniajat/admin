@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
@@ -6,17 +5,15 @@ import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import OrderInformation from "./scenes/order_information";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { ColorModeContext, useMode } from "./theme";
+import {useMode } from "./theme";
 import AddItem from "./scenes/add_item";
 import Inventory from "./scenes/inventory";
 import Logout from "./scenes/logout";
  
 function App() {
-  const [theme, colorMode] = useMode();
+  const [theme] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
- 
   return (
-    <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
@@ -33,9 +30,7 @@ function App() {
           </main>
         </div>
       </ThemeProvider>
-    </ColorModeContext.Provider>
   );
 }
- 
 export default App;
  

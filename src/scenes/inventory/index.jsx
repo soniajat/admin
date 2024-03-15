@@ -2,8 +2,8 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { mockDataContacts } from "../../data/mockInventory";
 import Header from "../../components/Header";
+
 const Inventory = () => {
-  
   const columns = [
     { field: "id", headerName: "item_id", flex: 1, headerClassName: "header-class" },
     { field: "image", headerName: "image", flex: 2, headerClassName: "header-class" },
@@ -53,8 +53,6 @@ const Inventory = () => {
     rows={mockDataContacts}
     columns={columns}
     components={{ Toolbar: GridToolbar }}
-    disableColumnMenu
-    disableColumnSelector
   />
 </Box>
       </Box>
