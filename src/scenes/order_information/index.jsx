@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 
- 
 const Order_Information = () => {
   const columns = [
     { field: "id", headerName: "ID", flex: 1, headerClassName: "header-class" },
@@ -55,7 +54,6 @@ const Order_Information = () => {
   <DataGrid
     rows={mockDataContacts}
     columns={columns}
-    components={{ Toolbar: GridToolbar }}
   />
 </Box>
       </Box>
