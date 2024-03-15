@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { mockDataContacts } from "../../data/mockData";
+import { mockDataContacts } from "../../data/mockOrder";
 import Header from "../../components/Header";
 
 const Order_Information = () => {

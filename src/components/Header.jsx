@@ -1,6 +1,5 @@
 import { Typography, Box } from "@mui/material";
 
-
 const Header = ({ title, subtitle }) => {
   return (
     <Box mb="0">
