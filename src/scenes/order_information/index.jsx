@@ -1,13 +1,10 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
-import { useTheme } from "@mui/material";
+
  
 const Order_Information = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode); 
   const columns = [
     { field: "id", headerName: "ID", flex: 1, headerClassName: "header-class" },
     { field: "orderId", headerName: "Order ID", headerClassName: "header-class", flex: 1 },
@@ -36,28 +33,17 @@ const Order_Information = () => {
           "& .MuiDataGrid-cell": {
             borderBottom: "none",
           },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: "#630944",
             borderBottom: "none",
             color: "#FFFFFF",
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
             backgroundColor: "silver",
             color: "#FFFFFF",
           },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[100]} !important`,
-          },
+          
         }}
       >
       <Box
